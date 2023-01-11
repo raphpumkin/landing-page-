@@ -86,7 +86,7 @@ function App() {
             </Button>
           </Myheader>
         </Box>
-        <Box mt={10} p={3}>
+        <Box mt={5} p={3}>
           <Grid container>
             <Grid item lg={6} sm={6} className="fadeIn">
               <Stack spacing={3}>
@@ -125,6 +125,7 @@ function App() {
             </Grid>
             <Grid item lg={6} sm={6}>
               <Box
+              mt={3}
                 className="hidden"
                 sx={{
                   display: "flex",
