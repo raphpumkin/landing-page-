@@ -58,7 +58,7 @@ function App() {
                 alt="green iguana"
               />
               <Box sx={{ display:"flex", alignItems:"center", justifyContent:"center"}}>
-              <Typography>Fingertipps</Typography>
+              <Typography sx={{fontWeight:"bold"}}>Fingertipps</Typography>
 
               </Box>
             
