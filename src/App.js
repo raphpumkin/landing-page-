@@ -94,9 +94,11 @@ function App() {
                   <Typography sx={{ color: mainColor }}>Wecome</Typography>
                 </Circle>
                 <Typography variant="h2" fontWeight="bold">
-                  I have{" "}
-                  <span style={{ color: mainColor }}>Creative Design</span>{" "}
-                  Experience
+                  Create an online {" "}
+                  <span style={{ color: mainColor }}>Presence</span>{" "}
+                  for your 
+                  <span style={{ color: mainColor }}> Bussiness</span>{" "}
+                 
                 </Typography>
                 <GrayText variant="p">
                   I’m Tanvir, a creative Product Designer. I’ve been helping
@@ -112,7 +114,7 @@ function App() {
                     }}
                   >
                     <Typography sx={{ color: "white", fontSize: "13px" }}>
-                      Contact me
+                      Get started
                     </Typography>
                   </MyBtn>
 
