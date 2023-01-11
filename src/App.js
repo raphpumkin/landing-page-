@@ -12,15 +12,16 @@ import {
   OutinedBox,
 } from "./components";
 import { Container } from "@mui/system";
-import { ReactComponent as Diamond } from "./diamond.svg";
-import { ReactComponent as Pulse } from "./pulse.svg";
-import { ReactComponent as Sch } from "./school.svg";
+
 import Dot from "./circles";
 import Doots from "./circles";
 import { useEffect } from "react";
-
+import Diamond from "./diamond";
+import School from "./school";
+import Pulse from "./pulse";
+import logo from "./logo192.png";
 function App() {
-  const mainColor = "#0DB760";
+  const mainColor = "#F28500";
   useEffect(() => {
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
@@ -49,18 +50,33 @@ function App() {
       <Container>
         <Box pt={2}>
           <Myheader>
-            <Logo />
-            <Stack mt={2} direction="row" spacing={2} sx={{display:{lg:"flex", sm:"flex", xs:"none"}}}>
+            <Stack     mt={2} direction="row" spacing={2}>
+              <CardMedia
+                sx={{ width: "30px", height: "30px" }}
+                component="img"
+                image={logo}
+                alt="green iguana"
+              />
+              <Typography>Fingertipps</Typography>
+            </Stack>
+
+            <Stack
+              mt={2}
+              direction="row"
+              spacing={2}
+              sx={{ display: { lg: "flex", sm: "flex", xs: "none" } }}
+            >
               <Typography>About</Typography>
               <Typography>Skills</Typography>
               <Typography>Portfolio</Typography>
               <Typography>Testimonial</Typography>
             </Stack>
-            <Button
+            <Button 
+              size="small"
               sx={{ border: `1px solid ${mainColor}` }}
               variant="outlined"
             >
-              <Typography sx={{ textDecoration: "none", color: "black" }}>
+              <Typography sx={{ textDecoration: "none", color: "black", fontSize:"10px" }}>
                 Dowload CV
               </Typography>
             </Button>
@@ -86,21 +102,22 @@ function App() {
                 <Stack direction="row" spacing={3}>
                   <MyBtn
                     p={0.2}
-                   pt={1}
+                    pt={1}
                     sx={{
                       backgroundColor: mainColor,
                     }}
                   >
-                    <Typography sx={{ color: "white", fontSize:"13px" }}>Contact me</Typography>
+                    <Typography sx={{ color: "white", fontSize: "13px" }}>
+                      Contact me
+                    </Typography>
                   </MyBtn>
 
                   {/* <Stack mt={2} direction="row">
                     <Typography>View Porfolio</Typography>
                   </Stack> */}
                 </Stack>
-                <Doots/>
+                <Doots color={mainColor} />
               </Stack>
-              
             </Grid>
             <Grid item lg={6} sm={6}>
               <Box
@@ -111,7 +128,6 @@ function App() {
                 }}
               >
                 <OutinedBox
-                  
                   p={2}
                   sx={{
                     width: "250px",
@@ -121,7 +137,7 @@ function App() {
                   }}
                 >
                   <CardMedia
-                   className="hidden2"
+                    className="hidden2"
                     sx={{
                       position: "absolute",
                       top: -91,
@@ -153,7 +169,7 @@ function App() {
         </Box>
         <Box>
           <Grid container spacing={6} className="logo hidden2">
-            <Grid item lg={4}  xs={4}>
+            <Grid item lg={4} xs={4}>
               <Box p={2} sx={{ borderRight: `1px solid ${mainColor}` }}>
                 <Stack
                   spacing={2}
@@ -190,7 +206,7 @@ function App() {
                 </Stack>
               </Center>
             </Grid>
-            <Grid item lg={4}  xs={4} className="logo hidden2">
+            <Grid item lg={4} xs={4} className="logo hidden2">
               <Box p={2} sx={{ display: "flex", justifyContent: "flex-end" }}>
                 <Stack
                   spacing={2}
@@ -239,7 +255,7 @@ function App() {
             <Grid item lg={6} xs={12}>
               <Box p={3} fullWith>
                 <Stack maxWidth={200} className="logo hidden">
-                  <Diamond />
+                  <Diamond color={mainColor} />
                   <Typography sx={{ fontWeight: "bold" }}>
                     visual Design
                   </Typography>
@@ -250,7 +266,7 @@ function App() {
                 <Stack className="logo hidden2">
                   <Box sx={{ display: "flex", justifyContent: "flex-end" }}>
                     <Stack maxWidth={200}>
-                      <Pulse />
+                      <Pulse color={mainColor} />
 
                       <Typography sx={{ fontWeight: "bold" }}>
                         visual Design
@@ -263,7 +279,7 @@ function App() {
                 </Stack>
 
                 <Stack maxWidth={200} className="logo hidden2">
-                  <Sch />
+                  <School color={mainColor} />
                   <Typography sx={{ fontWeight: "bold" }}>
                     visual Design
                   </Typography>
