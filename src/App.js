@@ -174,7 +174,7 @@ function App() {
         <Box>
           <Grid container spacing={6} className="logo hidden2">
             <Grid item lg={4} xs={4}>
-              <Box p={2} sx={{ borderRight: `1px solid ${mainColor}` }}>
+              <Box p={2} >
                 <Stack
                   spacing={2}
                   sx={{ display: "flex", justifyContent: "flex-start" }}
@@ -197,9 +197,10 @@ function App() {
                   display: "flex",
                   alignItems: "center",
                   justifyContent: "center",
+                  borderLeft: `1px solid ${mainColor}`
                 }}
               >
-                <Stack spacing={2}>
+                <Stack spacing={2} sx={{  }}>
                   <Typography
                     variant="h5"
                     sx={{ color: mainColor, fontWeight: "bold" }}
