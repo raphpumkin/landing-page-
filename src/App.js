@@ -50,14 +50,18 @@ function App() {
       <Container>
         <Box pt={2}>
           <Myheader>
-            <Stack     mt={2} direction="row" spacing={2}>
+            <Stack      direction="row" spacing={2}>
               <CardMedia
-                sx={{ width: "30px", height: "30px" }}
+                sx={{ width: "50px", height: "50px" }}
                 component="img"
                 image={logo}
                 alt="green iguana"
               />
+              <Box sx={{ display:"flex", alignItems:"center", justifyContent:"center"}}>
               <Typography>Fingertipps</Typography>
+
+              </Box>
+            
             </Stack>
 
             <Stack
